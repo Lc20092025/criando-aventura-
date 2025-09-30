@@ -7,84 +7,170 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Em busca da cidade perdida</title>
+    <title>Aventura na Floresta de Hanan</title>
+    <style>
+        /* Estilos simples para ocultar e exibir os passos */
+        .passo {
+            display: none;
+        }
+        
+        .passo.ativo {
+            display: block;
+        }
+
+        body {
+            font-family: 'Bai Jamjuree', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .btn-proximo {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .btn-proximo:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <main>
+        <!-- Passo 0: Chegada à Floresta -->
         <div class="passo ativo" id="passo-0">
             <img src="img/cenario-passo0.png" alt="">
-            <p>Era uma manhã fria e neblinosa quando o grupo de aventureiros chegou à entrada da Floresta!</p>
-            <button class="btn-proximo" data-proximo="1">Trilha a esquerda</button>
-            <button class="btn-proximo" data-proximo="2">trilha a direita</button>
+            <p>Era uma manhã fria e neblinosa quando o grupo de aventureiros chegou à entrada da Floresta de Hanan. O Guardião da floresta apareceu diante deles, pronto para lançar o primeiro desafio.</p>
+            <button class="btn-proximo" data-proximo="1">Seguir pela trilha à esquerda</button>
+            <button class="btn-proximo" data-proximo="2">Seguir pela trilha à direita</button>
         </div>
+
+        <!-- Passo 1: Trilha à esquerda -->
         <div class="passo" id="passo-1">
-            <p>Diziam que a floresta era viva, que seus caminhos mudavam e que, quem se aventurasse nela, nunca mais seria o mesmo.</p>
-            <button class="btn-proximo" data-proximo="3">Seguir em frente </button>
-            <button class="btn-proximo" data-proximo="4">Desistir e voltar para casa</button>
+            <p>O grupo decide seguir pela trilha à esquerda. A vegetação parece crescer mais densa à medida que avançam. Após algumas horas, encontram um labirinto de árvores e arbustos altos, uma verdadeira armadilha de sombras.</p>
+            <button class="btn-proximo" data-proximo="3">Tentar encontrar a saída do labirinto</button>
+            <button class="btn-proximo" data-proximo="4">Desistir e voltar para a entrada</button>
         </div>
+
+        <!-- Passo 2: Trilha à direita -->
         <div class="passo" id="passo-2">
-            <p>Com mochilas carregadas de provisões e corações cheios de curiosidade, o quarteto começou a caminhada pela trilha</p>
-            <button class="btn-proximo" data-proximo="5">Investigar uma biblioteca abandonada </button>
-            <button class="btn-proximo" data-proximo="6">continuar a trilha </button>
+            <p>Ao seguir pela trilha à direita, o grupo encontra uma clareira e, no centro, uma pedra antiga com inscrições misteriosas. Parece que há algo mais profundo nesta floresta.</p>
+            <button class="btn-proximo" data-proximo="5">Investigar as inscrições na pedra</button>
+            <button class="btn-proximo" data-proximo="6">Continuar a caminhar pela trilha</button>
         </div>
+
+        <!-- Passo 3: Labirinto das sombras -->
         <div class="passo" id="passo-3">
-            <p>No topo do Pico da Tijuca, você encontra uma antiga inscrição apontando que a próxima pista está
-                localizada no Amazonas.</p>
-            <button class="btn-proximo" data-proximo="7">Seguir para o Amazonas</button>
+            <p>Ao tentar atravessar o labirinto, as sombras parecem se mover, criando ilusões de caminhos fechados. Apenas um membro do grupo consegue perceber as pistas escondidas nas sombras.</p>
+            <button class="btn-proximo" data-proximo="7">Seguir as pistas para encontrar a saída</button>
+            <button class="btn-proximo" data-proximo="4">Voltar e tentar a trilha à direita</button>
         </div>
 
+        <!-- Passo 4: Desistir da Aventura -->
         <div class="passo" id="passo-4">
-            <img src="303940-cena-de-floresta-com-trilha-para-a-montanha-gratis-vetor.jpg" alt="imagem voltando para casa e desitindo da aventura">
-            <p>Você decide que a aventura é grande demais e volta para casa, mas sempre se pergunta o que teria
-                encontrado.</p>
+            <img src="303940-cena-de-floresta-com-trilha-para-a-montanha-gratis-vetor.jpg" alt="imagem voltando para casa e desistindo da aventura">
+            <p>O grupo decide desistir da aventura e voltar para casa. Embora tristes por não terem chegado ao final, sempre se perguntam o que poderiam ter descoberto na Floresta de Hanan.</p>
         </div>
 
+        <!-- Passo 5: Investigar a pedra com inscrições -->
         <div class="passo" id="passo-5">
-            <p>Nas igrejas de Olinda, você descobre um mapa antigo escondido atrás de um altar, apontando que a próxima
-                pista está no Amazonas.</p>
-            <button class="btn-proximo" data-proximo="7">Viajar para o Amazonas</button>
+            <p>As inscrições na pedra falam de uma árvore antiga no centro da floresta, conhecida como o Coração da Floresta. Parece que é uma pista importante para continuar a jornada.</p>
+            <button class="btn-proximo" data-proximo="6">Seguir em frente e procurar a árvore</button>
         </div>
 
+        <!-- Passo 6: Continuar a trilha -->
         <div class="passo" id="passo-6">
-            <p>Explorando as praias, você encontra uma caverna escondida, mas ela leva a um beco sem saída.</p>
-            <button class="btn-proximo" data-proximo="8">Voltar e explorar as igrejas</button>
+            <p>Continuando pela trilha, o grupo chega a um rio bifurcado. As correntes parecem fortes, e decidir qual caminho seguir pode ser um grande risco.</p>
+            <button class="btn-proximo" data-proximo="7">Seguir pelo rio à esquerda</button>
+            <button class="btn-proximo" data-proximo="8">Seguir pelo rio à direita</button>
         </div>
 
+        <!-- Passo 7: Encontrar a saída do labirinto -->
         <div class="passo" id="passo-7">
-            <p>No Amazonas, a busca pela cidade perdida se intensifica. Você se depara com um rio bifurcado.</p>
-            <button class="btn-proximo" data-proximo="9">Seguir pelo rio à esquerda</button>
-            <button class="btn-proximo" data-proximo="10">Seguir pelo rio à direita</button>
+            <p>Seguindo as pistas deixadas pelas sombras, o grupo finalmente encontra a saída do labirinto. A sensação de alívio é grande, mas a jornada ainda está longe de terminar.</p>
+            <button class="btn-proximo" data-proximo="6">Seguir para o rio e continuar a busca</button>
         </div>
 
+        <!-- Passo 8: Seguir pelo rio à direita -->
         <div class="passo" id="passo-8">
-            <p>De volta às igrejas, você finalmente encontra o mapa antigo. Agora, para o Amazonas!</p>
-            <button class="btn-proximo" data-proximo="7">Seguir para o Amazonas</button>
+            <p>O rio à direita leva o grupo até uma área pantanosa. Embora haja belas vistas, não há sinais do Coração da Floresta ou da cidade perdida.</p>
+            <button class="btn-proximo" data-proximo="9">Voltar e tentar o outro rio</button>
         </div>
 
+        <!-- Passo 9: Seguir pelo rio à esquerda -->
         <div class="passo" id="passo-9">
-            <p>O rio à esquerda leva você a uma cachoeira escondida com inscrições antigas que revelam a entrada da
-                cidade perdida.</p>
-            <button class="btn-proximo" data-proximo="11">Explorar a cidade perdida</button>
+            <p>O rio à esquerda leva o grupo a uma cachoeira escondida, com inscrições antigas revelando a entrada para a cidade perdida. Eles estão cada vez mais próximos de seu destino.</p>
+            <button class="btn-proximo" data-proximo="10">Explorar a cidade perdida</button>
         </div>
 
+        <!-- Passo 10: Explorar a cidade perdida -->
         <div class="passo" id="passo-10">
-            <p>O rio à direita termina em uma área pantanosa. Apesar de belas vistas, não há sinais da cidade perdida
-                aqui.</p>
-            <button class="btn-proximo" data-proximo="12">Retornar e tentar o outro rio</button>
+            <img src="303940-cena-de-floresta-com-trilha-para-a-montanha-gratis-vetor.jpg" alt="Explorando a cidade perdida">
+            <p>Dentro da cidade perdida, o grupo encontra tesouros e mistérios antigos. O Coração da Floresta revela suas verdadeiras riquezas e segredos.</p>
+            <button class="btn-proximo" data-proximo="11">Estudar e preservar o local</button>
         </div>
 
+        <!-- Passo 11: Estudo e preservação -->
         <div class="passo" id="passo-11">
-            <img src="303940-cena-de-floresta-com-trilha-para-a-montanha-gratis-vetor.jpg" alt="encontrando uma cidade maravilhosa perdida no Amazonas">
-            <p>Dentro da cidade perdida, você descobre tesouros inimagináveis e decide se dedicar a estudar e preservar
-                este lugar</p>
-        </div>
-
-        <div class="passo" id="passo-12">
-            <p>Retornando e escolhendo o rio à esquerda, você finalmente encontra a cachoeira escondida e as inscrições
-                que levam à cidade perdida.</p>
-            <button class="btn-proximo" data-proximo="11">Explorar a cidade perdida</button>
+            <p>O grupo decide se dedicar ao estudo e à preservação do local, tornando-se os novos guardiões da Floresta de Hanan, mantendo seus segredos vivos para as futuras gerações.</p>
         </div>
     </main>
-    <script src="script.js"></script>
+    <script>
+        // Espera o carregamento completo da página
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtém todos os botões da página
+            const botoes = document.querySelectorAll(".btn-proximo");
+
+            // Para cada botão, adiciona um evento de clique
+            botoes.forEach(botao => {
+                botao.addEventListener("click", function () {
+                    // Obtém o próximo passo a ser mostrado
+                    const proximoPasso = botao.getAttribute("data-proximo");
+                    
+                    // Esconde todos os passos
+                    esconderTodosPassos();
+
+                    // Mostra o próximo passo
+                    mostrarPasso(proximoPasso);
+                });
+            });
+
+            // Função para esconder todos os passos
+            function esconderTodosPassos() {
+                const passos = document.querySelectorAll(".passo");
+                passos.forEach(passo => {
+                    passo.classList.remove("ativo");
+                });
+            }
+
+            // Função para mostrar o passo específico
+            function mostrarPasso(id) {
+                const passo = document.getElementById(`passo-${id}`);
+                if (passo) {
+                    passo.classList.add("ativo");
+                }
+            }
+
+            // Inicializa o primeiro passo (passo 0)
+            mostrarPasso(0);
+        });
+    </script>
 </body>
 </html>
